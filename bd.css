@@ -1,0 +1,83 @@
+/* bd.css - Stylish Birthday Form with Pink, Blue, White Theme */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fce4ec, #e0f7fa); /* light pink to light blue */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 40px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+    border: 2px solid #ffb6c1; /* light pink border */
+}
+
+h2 {
+    text-align: center;
+    color: #0077b6; /* blue */
+    margin-bottom: 25px;
+}
+
+p {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+select:focus,
+input[type="text"]:focus {
+    border-color: #ff69b4; /* hot pink */
+    outline: none;
+    box-shadow: 0 0 5px #ff69b4;
+}
+
+button {
+    width: auto;
+    padding: 6px 16px;
+    font-size: 14px;
+    margin-top: 20px;
+    background-color: #00b4d8; /* vibrant blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #0077b6; /* darker blue */
+}
+
+#greeting {
+    text-align: center;
+    color: #d6336c; /* pink */
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

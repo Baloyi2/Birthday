@@ -1,83 +1,89 @@
 /* General styling */
 body {
-    font-family: 'Dancing Script', sans-serif;  /* Fun and cursive font */
+    font-family: 'Dancing Script', cursive;
     text-align: center;
+    margin: 0;
     padding: 20px;
-    background-image: url('special.jpg'); /* Set special.jpg as the background image */
-    background-size: cover; /* Ensure the image covers the entire background */
-    background-position: center; /* Center the image */
-    color: #444; /* Neutral color for text */
-    height: 100vh; /* Full viewport height */
+    background-image: url('special.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #444;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center content both vertically and horizontally */
-    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+    align-items: center;
 }
 
-/* Container for the heading and message */
+/* Main content container */
 .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Styling for the heading */
+/* Heading style */
 h2 {
-    font-weight: bold; /* Make the heading bold */
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 36px;
+    color: #ff4081;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px #fff;
 }
 
-/* Styling for the birthday message */
+/* Message styling */
 .highlighted-message {
     font-size: 24px;
-    color: #333;
-    background: linear-gradient(45deg, #ff66b2, #66ccff); /* Pink to Blue gradient */
+    color: #fff;
+    background: linear-gradient(45deg, #ff66b2, #66ccff);
     padding: 25px;
     border-radius: 25px;
     display: inline-block;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    max-width: 70%; /* Reduced width of the message container */
-    font-family: 'Dancing Script', sans-serif; /* Cursive font for a fun vibe */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 70%;
+    font-family: 'Dancing Script', cursive;
     font-weight: bold;
-    text-transform: uppercase; /* All caps for impact */
-    letter-spacing: 2px; /* Add space between letters for better readability */
-    animation: textFadeIn 3s ease-out forwards, stayInPlace 7s ease-out 7s forwards; /* Start after 7s, stay for 7s */
-    font-style: italic; /* Make the message italic */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-style: italic;
+    animation: textFadeIn 3s ease-out forwards, stayInPlace 7s ease-out 7s forwards;
 }
 
-/* Add text fade-in effect */
+/* Animations */
 @keyframes textFadeIn {
     0% {
         opacity: 0;
-        transform: translateY(30px); /* Start below */
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* End in place */
+        transform: translateY(0);
     }
 }
 
-/* Stay in place for 7 seconds */
 @keyframes stayInPlace {
-    0% {
-        opacity: 1;
-    }
-    100% {
+    0%, 100% {
         opacity: 1;
     }
 }
 
-/* Responsive design for smaller screens */
+/* Responsive styles */
 @media (max-width: 768px) {
     .highlighted-message {
-        padding: 15px;
+        padding: 20px;
         font-size: 20px;
-        max-width: 90%; /* Adjust the width for smaller screens */
+        max-width: 90%;
     }
 
     h2 {
-        font-size: 28px;
+        font-size: 30px;
+    }
+
+    .content-container {
+        padding: 20px;
     }
 }

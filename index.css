@@ -1,0 +1,121 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Confirmation Section */
+#confirmationSection {
+    margin-top: 30px;
+}
+
+#confirmedDetails p {
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+#confirmedDetails p strong {
+    color: #4CAF50;
+}
+
+#confirmedDetails p span {
+    font-weight: bold;
+}
+
+/* Edit and Confirm Buttons */
+button {
+    margin-top: 15px;
+    width: 150px;
+}
+
+button:last-child {
+    background-color: #f44336;
+}
+
+button:last-child:hover {
+    background-color: #e53935;
+}
+
+/* Input Sections */
+div[id$="Section"] {
+    margin-bottom: 20px;
+}
+
+/* General Styling */
+input {
+    display: block;
+    margin: 10px auto;
+}

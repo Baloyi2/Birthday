@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Date Details</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Plan Your Outing</h1>
+
+        <!-- Place Type Section -->
+        <div id="placeSection">
+            <p>What kind of place do you want to go to?</p>
+            <input type="text" id="placeInput" placeholder="e.g., Restaurant, Cinema, FunCompany" />
+            <br />
+            <button onclick="showLocationInput()">Next</button>
+        </div>
+
+        <!-- Location Section -->
+        <div id="locationSection" class="hidden">
+            <p>Where is this place located?</p>
+            <input type="text" id="locationInput" placeholder="Enter location" />
+            <br />
+            <button onclick="showDateInput()">Next</button>
+        </div>
+
+        <!-- Date Section -->
+        <div id="dateSection" class="hidden">
+            <p>Enter the date:</p>
+            <input type="date" id="dateInput" />
+            <br />
+            <button onclick="showTimeInput()">Next</button>
+        </div>
+
+        <!-- Time Section -->
+        <div id="timeSection" class="hidden">
+            <p>Enter the time:</p>
+            <input type="time" id="timeInput" />
+            <br />
+            <button onclick="confirmDetails()">Confirm</button>
+        </div>
+
+        <!-- Confirmation Section -->
+        <div id="confirmationSection" class="hidden">
+            <h2>Confirm Your Details:</h2>
+            <div id="confirmedDetails">
+                <p><strong>Place:</strong> <span id="confirmPlace"></span></p>
+                <p><strong>Location:</strong> <span id="confirmLocation"></span></p>
+                <p><strong>Date:</strong> <span id="confirmDate"></span></p>
+                <p><strong>Time:</strong> <span id="confirmTime"></span></p>
+            </div>
+            <button onclick="sendToWhatsApp()">Yes, Confirm</button>
+            <button onclick="editDetails()">Edit</button>
+        </div>
+
+        <!-- Greeting Message -->
+        <h2 id="greetingMessage"></h2>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

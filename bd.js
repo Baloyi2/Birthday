@@ -1,15 +1,26 @@
-function greetUser() {
-    let name = document.getElementById("nameInput").value;
-    let month = document.getElementById("monthInput").value;
-    let day = document.getElementById("dayInput").value;
-
-    // Validate name: should be selected
+function goToDatePage() {
+    const name = document.getElementById('nameInput').value.trim();
     if (!name) {
-        alert("Please select your name.");
+        alert("Please enter your name.");
         return;
     }
 
-    // Validate month: should be a valid month name
+    // Redirect to date.html with the name as URL parameter
+    window.location.href = `date.html?name=${encodeURIComponent(name)}`;
+}
+
+function greetUser() {
+    let name = document.getElementById("nameInput").value.trim();
+    let month = document.getElementById("monthInput").value;
+    let day = document.getElementById("dayInput").value;
+
+    // Validate name
+    if (!name) {
+        alert("Please enter your name.");
+        return;
+    }
+
+    // Validate month
     const validMonths = [
         "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
@@ -20,14 +31,14 @@ function greetUser() {
         return;
     }
 
-    // Validate day: should be between 1 and 31
+    // Validate day
     day = parseInt(day, 10);
     if (isNaN(day) || day < 1 || day > 31) {
         alert("Please select a valid birth date.");
         return;
     }
 
-    // Redirect to the special message page with the parameters in the URL
+    // Redirect to special.html with the parameters
     window.location.href = `special.html?name=${encodeURIComponent(name)}&month=${encodeURIComponent(month)}&day=${encodeURIComponent(day)}`;
 }
 

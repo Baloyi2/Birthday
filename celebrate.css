@@ -1,0 +1,144 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f9d5e5 0%, #fbc7c8 40%, #f9e1d9 100%);
+    color: #4a3c44;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-width: 850px;
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+}
+
+/* Header */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #d94f70;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Highlighted name */
+#userName {
+    color: #e14f6f;
+    font-weight: 700;
+}
+
+/* Birthday paragraph */
+#birthdayMessage {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #6a4c58;
+    margin: 0 auto 30px;
+    max-width: 700px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    padding: 0 15px;
+}
+
+/* Image gallery */
+#picturesContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#picturesContainer img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(217, 79, 112, 0.4);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#picturesContainer img:hover {
+    transform: scale(1.07);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #e14f6f, #d94f70);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 35px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(217, 79, 112, 0.6);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    min-width: 160px;
+}
+
+button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #d94f70, #e14f6f);
+    box-shadow: 0 8px 25px rgba(217, 79, 112, 0.9);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #999;
+}
+
+/* Status message */
+#statusMessage {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    color: #a64a63;
+    font-weight: 600;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    #birthdayMessage {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    #picturesContainer img {
+        width: 110px;
+        height: 110px;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 1rem;
+        min-width: 130px;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+}

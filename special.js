@@ -6,10 +6,15 @@ window.onload = function () {
 
     const messageElement = document.getElementById('specialMessage');
 
-    // List of special birthdays
+    // List of valid birthdays (now all redirect to celebrate.html)
     const validBirthdays = [
-        { name: "Nwayitelo", month: "May", day: 31, page: "nwayitelo.html" },
-        { name: "Precious", month: "May", day: 31, page: "precious.html" }
+        { name: "Nwayitelo", month: "june", day: 1 },
+        { name: "Precious", month: "April", day: 27 },
+        { name: "Ofentse", month: "April", day: 15 },
+        { name: "Nkiyasi", month: "August", day: 8 },
+        { name: "Thembi", month: "July", day: 18 },
+        { name: "Joy", month: "January", day: 1 },
+        { name: "Talent", month: "December", day: 25 }
     ];
 
     // Get today's date
@@ -17,23 +22,24 @@ window.onload = function () {
     const currentDay = currentDate.getDate();
     const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
 
-    // Find if the entered details match a valid birthday
+    // Find matching birthday entry
     const birthdayEntry = validBirthdays.find(birthday =>
-        birthday.name === name && birthday.month === month && birthday.day === day
+        birthday.name.toLowerCase() === name?.toLowerCase() &&
+        birthday.month.toLowerCase() === month?.toLowerCase() &&
+        birthday.day === day
     );
 
     if (birthdayEntry) {
-        // Check if the current date matches the entered birthday details
-        if (currentDay === day && currentMonth === month) {
-            // Redirect to the person's birthday page if today is their birthday
-            window.location.href = birthdayEntry.page;
+        if (currentDay === day && currentMonth.toLowerCase() === month?.toLowerCase()) {
+            // Redirect to the shared celebration page
+            window.location.href = `celebrate.html?name=${encodeURIComponent(name)}`;
         } else {
-            // If it's not their birthday today, show the "not today" message
-            messageElement.innerHTML = `<p>Hey ${name}, your birthday is on ${day} of ${month}. It's not today, but sending you good vibes! 🎈</p>`;
+            // Not their birthday today
+            messageElement.innerHTML = `<p>Hey ${birthdayEntry.name}, your birthday is on ${day} of ${month}. It's not today, but sending you good vibes! 🎈</p>`;
         }
     } else {
-        // If not a valid birthday, show an alert with the specified message and redirect
-        alert("Sorry, the details you entered are not recognized on the system. Please try again with valid details.");
-        window.location.href = "index.html"; // Redirect to the main page (index.html)
+        // Invalid entry
+        alert("Sorry, the details you entered are not recognized. Please try again.");
+        window.location.href = "index.html";
     }
 };
