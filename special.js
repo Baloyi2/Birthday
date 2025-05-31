@@ -9,7 +9,7 @@ window.onload = function () {
     // List of special birthdays
     const validBirthdays = [
         { name: "Nwayitelo", month: "May", day: 31, page: "nwayitelo.html" },
-        { name: "Precious", month: "April", day: 27, page: "precious.html" }
+        { name: "Precious", month: "May", day: 31, page: "precious.html" }
     ];
 
     // Get today's date
