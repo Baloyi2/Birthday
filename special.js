@@ -8,7 +8,7 @@ window.onload = function () {
 
     // List of special birthdays
     const validBirthdays = [
-        { name: "Nwayitelo", month: "January", day: 2, page: "nwayitelo.html" },
+        { name: "Nwayitelo", month: "May", day: 31, page: "nwayitelo.html" },
         { name: "Precious", month: "April", day: 27, page: "precious.html" }
     ];
 
